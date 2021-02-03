@@ -279,5 +279,13 @@ public partial class frmReplaceText : System.Windows.Forms.Form {
         } catch (System.Exception ex) {
             MessageBox.Show (ex.Message, "Error...", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+        //Numbering cables
+        try {
+            oCTXLoc.DialogName = "XCCableNumberingResultDialog";
+            oCTXLoc.ContextMenuName = "1150";
+            oCTXMenu.AddMenuItem (oCTXLoc, "Replace text", "DialogReplaceText", false, false);
+        } catch (System.Exception ex) {
+            MessageBox.Show (ex.Message, "Error...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }
